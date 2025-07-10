@@ -1,0 +1,169 @@
+/* Carousel.css  */
+
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-content {
+  max-width: 800px;
+  animation: fadeInUp 0.8s ease-out;
+  padding: 0 20px;
+}
+
+/* Styles des boutons améliorés */
+.carousel-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.carousel-button {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  min-width: 160px;
+  text-align: center;
+  border-radius: 50px !important;
+  padding: 12px 30px !important;
+  overflow: hidden;
+  z-index: 1;
+  border: none !important;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* Bouton principal */
+.btn-primary {
+  background: linear-gradient(135deg, var(--secondary-main) 0%, var(--secondary-dark) 100%);
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary-main) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  border-radius: 50px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+/* Bouton secondaire */
+.btn-outline {
+  background: transparent;
+  color: white;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(5px);
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  z-index: -1;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  opacity: 0.5;
+}
+
+.btn-outline:hover {
+  border-color: white !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline:hover::before {
+  opacity: 0.8;
+}
+
+/* Effet de vague amélioré */
+.carousel-wave {
+  height: 120px;
+  width: 100%;
+  transform-origin: bottom;
+  animation: waveAnimation 15s linear infinite;
+}
+
+/* Animation de la vague */
+@keyframes waveAnimation {
+  0% { transform: scaleY(1) }
+  50% { transform: scaleY(1.2) }
+  100% { transform: scaleY(1) }
+}
+
+/* Background amélioré */
+.carousel-slide {
+  background: linear-gradient(135deg, rgba(61, 90, 131, 0.9) 0%, rgba(16, 44, 83, 0.95) 100%), 
+              url('/img/smart.png') !important;
+  background-size: contain !important;
+  background-position:right center !important;
+  background-repeat: no-repeat !important;
+  width: 100% !important;
+  background-attachment: fixed !important;
+}
+
+
+
+/* Effet de parallaxe pour le background */
+@media (min-width: 992px) {
+  .carousel-slide {
+    background-attachment: fixed !important;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-buttons {
+    flex-direction: column;
+    gap: 12px !important;
+  }
+  
+  .carousel-button {
+    width: 100%;
+    padding: 10px 20px !important;
+  }
+  
+  .carousel-wave {
+    height: 80px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

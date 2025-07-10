@@ -1,0 +1,11 @@
+/* Modal and Popup Transitions */
+.fade-in {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  visibility: visible;
+}

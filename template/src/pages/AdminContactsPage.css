@@ -1,0 +1,57 @@
+.admin-contacts-page {
+  min-height: calc(100vh - 60px);
+  background-color: #f8f9fa;
+}
+
+.admin-contacts-page .table {
+  margin-bottom: 0;
+}
+
+.admin-contacts-page .table th {
+  font-weight: 600;
+  color: #495057;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.admin-contacts-page .table td {
+  vertical-align: middle;
+}
+
+.admin-contacts-page .table tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.admin-contacts-page .card {
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.admin-contacts-page .btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.admin-contacts-page .text-truncate {
+  max-width: 300px;
+  display: inline-block;
+}
+
+.admin-contacts-page .unread {
+  background-color: rgba(13, 110, 253, 0.05);
+  font-weight: 500;
+}
+
+.spinner-border {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

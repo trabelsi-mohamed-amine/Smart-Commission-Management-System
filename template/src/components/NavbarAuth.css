@@ -1,0 +1,61 @@
+.auth-section .dropdown-toggle {
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 0.4rem 0.8rem;
+}
+
+.auth-section .dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.auth-section .dropdown-toggle::after {
+  margin-left: 8px;
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+
+.auth-section .dropdown-menu {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 0;
+  overflow: hidden;
+}
+
+.auth-section .dropdown-header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.auth-section .dropdown-item {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.auth-section .dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.auth-section .dropdown-item.text-danger:hover {
+  background-color: #f8d7da;
+}
+
+.auth-section .badge {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.auth-links .nav-link {
+  color: var(--dark);
+  font-weight: 500;
+  padding: 10px 15px !important;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.auth-links .nav-link:hover {
+  color: var(--primary);
+}

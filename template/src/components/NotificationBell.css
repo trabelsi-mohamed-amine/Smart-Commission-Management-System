@@ -1,0 +1,116 @@
+.notification-bell-container {
+  position: relative;
+  margin-right: 15px;
+}
+
+.notification-bell {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.notification-bell:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.notification-bell .badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  padding: 0.25rem 0.4rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  min-width: 18px;
+  min-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.notification-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+  margin-top: 10px;
+}
+
+.notification-header {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  margin: 0;
+  font-weight: 600;
+}
+
+.notification-list {
+  padding: 0;
+}
+
+.notification-item {
+  padding: 15px;
+  border-bottom: 1px solid #f4f4f4;
+  transition: background-color 0.2s;
+}
+
+.notification-item:hover {
+  background-color: #f9f9f9;
+}
+
+.notification-item.unread {
+  background-color: #f0f7ff;
+}
+
+.notification-item.unread:hover {
+  background-color: #e6f0ff;
+}
+
+.notification-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.notification-time, 
+.notification-meta {
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 3px;
+}
+
+.notification-delete-btn {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0;
+  line-height: 1;
+}
+
+.notification-delete-btn:hover {
+  color: #dc3545;
+}
+
+.notification-loading,
+.notification-empty {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
